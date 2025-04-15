@@ -60,8 +60,8 @@ def make_prediction(model, img_array, class_labels, binary=False):
    
 def load_DR_model():
     global DR_model 
-    path = kagglehub.model_download("zeyadabdo/diabetic-retinopathy-models/keras/resnet50-v1")
-    DR_model_path = os.path.join(path, "Diabetic-Retinopathy-ResNet50-model.h5")
+    path = kagglehub.model_download("zeyadabdo/diabetic-retinopathy-models/keras/vgg16-v1")
+    DR_model_path = os.path.join(path, "Diabetic-Retinopathy-vgg16-model.h5")
     DR_model = load_model(DR_model_path, compile=False)   
     
 @app.on_event("startup")
